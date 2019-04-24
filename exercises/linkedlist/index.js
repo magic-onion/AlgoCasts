@@ -10,7 +10,46 @@ class Node {
 }
 
 class LinkedList {
+  constructor() {
+    this.head = null
+  }
+
+  insertFirst(data){
+    this.head = new Node(data, this.head)
+  }
+
+  size() {
+    let count = 0
+    let node = this.head
+    while (node) {
+      count++
+      node = node.next
+    }
+    return count
+  }
+
+  getFirst() {
+    return this.head
+  }
+
+  getLast() {
+    let node = this.head
+    let lastNode = {}
+    while (node) {
+      if (!node.next) {
+        lastNode = node
+      }
+      node = node.next
+    }
+    return lastNode
+  }
+
+  
 
 }
+
+
+
+
 
 module.exports = { Node, LinkedList };
