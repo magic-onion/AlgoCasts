@@ -34,7 +34,10 @@ class Tree {
   }
 
   traverseBF(fn) {
-
+    //iterate through children
+    //if a child has a child, iterate through
+    let breadth = [this.root]
+    while ()
   }
 
   traverseDF() {
